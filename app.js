@@ -4,6 +4,7 @@ const swaggerUi = require("swagger-ui-express");
 const routes = require("./routes/routes");
 
 const app = express();
+app.use(express.static("node_modules/swagger-ui-dist"));
 
 app.use("/", routes);
 
