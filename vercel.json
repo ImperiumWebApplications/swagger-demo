@@ -1,8 +1,10 @@
 {
   "version": 2,
+  "name": "demo-project",
   "builds": [{ "src": "app.js", "use": "@vercel/node" }],
   "routes": [
     { "src": "/(api-docs|api)/.*", "dest": "app.js" },
-    { "src": "/(syspro|bpa)/orders", "dest": "app.js" }
+    { "src": "/(syspro|bpa)/orders", "dest": "app.js" },
+    { "src": "/swagger-ui/.*", "headers": { "cache-control": "max-age=0" } }
   ]
 }
